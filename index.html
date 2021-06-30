@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Hello({person='Default Name', age='0'}){
+            return (
+                <h1> Hello {person} of Age {age} </h1> 
+            )
+        }
+
+        function Hellos(){
+            return ( 
+                <React.Fragment>
+                <Hello person="Chayan" age="21" />
+                <Hello person="Vansika" age="20" />
+                <Hello person="Vani"/>
+                <Hello person="Tanshi"/>
+                </React.Fragment>
+            )
+        }
+
+        // ReactDOM.render(<div><p>HELLO WELCOME</p></div>, document.getElementById("root"));
+        ReactDOM.render(<Hellos/>, document.getElementById("root"));
+    </script>
+</body>
+</html>
